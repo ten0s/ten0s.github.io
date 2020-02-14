@@ -5,7 +5,7 @@ title: Setup Print Server on Raspberry Pi
 
 ### Generic Setup
 
-* Setup Raspbian on SD card as described [here](setup-raspbian-on-sd-card), but change the name to **printerpi**.
+* Setup Raspbian on SD card as described [here](setup-raspbian-on-sd-card), but change the device name to **printerpi**.
 
 * SSH to device
 ```
@@ -34,103 +34,102 @@ $ sudo apt install cups
 ```
 
 * Replace **/etc/cusp/cupsd.conf** with the code below:
-
 ```
-$ sudo tee /etc/cups/cupsd.conf <<EOF
-LogLevel warn
-PageLogFormat
-MaxLogSize 0
-Listen 0.0.0.0:631
-Listen /var/run/cups/cups.sock
-Browsing On
-BrowseLocalProtocols dnssd
-DefaultAuthType Basic
-WebInterface Yes
-<Location />
-  Order allow,deny
-  Allow @Local
-</Location>
-<Location /admin>
-  Order allow,deny
-  Allow @Local
-</Location>
-<Location /admin/conf>
-  AuthType Default
-  Require user @SYSTEM
-  Order allow,deny
-  Allow @Local
-</Location>
-<Location /admin/log>
-  AuthType Default
-  Require user @SYSTEM
-  Order allow,deny
-  Allow @Local
-</Location>
-<Policy default>
-  JobPrivateAccess default
-  JobPrivateValues default
-  SubscriptionPrivateAccess default
-  SubscriptionPrivateValues default
-  <Limit Create-Job Print-Job Print-URI Validate-Job>
-    Order deny,allow
-  </Limit>
-  <Limit Send-Document Send-URI Hold-Job Release-Job Restart-Job Purge-Jobs Set-Job-Attributes Create-Job-Subscription Renew-Subscription Cancel-Subscription Get-Notifications Reprocess-Job Cancel-Current-Job Suspend-Current-Job Resume-Job Cancel-My-Jobs Close-Job CUPS-Move-Job CUPS-Get-Document>
-    Require user @OWNER @SYSTEM
-    Order deny,allow
-  </Limit>
-  <Limit CUPS-Add-Modify-Printer CUPS-Delete-Printer CUPS-Add-Modify-Class CUPS-Delete-Class CUPS-Set-Default CUPS-Get-Devices>
-#    Keeps asking for user/password when adding printer
-#    AuthType Default
-#    Require user @SYSTEM
-    Order deny,allow
-  </Limit>
-  <Limit Pause-Printer Resume-Printer Enable-Printer Disable-Printer Pause-Printer-After-Current-Job Hold-New-Jobs Release-Held-New-Jobs Deactivate-Printer Activate-Printer Restart-Printer Shutdown-Printer Startup-Printer Promote-Job Schedule-Job-After Cancel-Jobs CUPS-Accept-Jobs CUPS-Reject-Jobs>
+  $ sudo tee /etc/cups/cupsd.conf <<EOF
+  LogLevel warn
+  PageLogFormat
+  MaxLogSize 0
+  Listen 0.0.0.0:631
+  Listen /var/run/cups/cups.sock
+  Browsing On
+  BrowseLocalProtocols dnssd
+  DefaultAuthType Basic
+  WebInterface Yes
+  <Location />
+    Order allow,deny
+    Allow @Local
+  </Location>
+  <Location /admin>
+    Order allow,deny
+    Allow @Local
+  </Location>
+  <Location /admin/conf>
     AuthType Default
     Require user @SYSTEM
-    Order deny,allow
-  </Limit>
-  <Limit CUPS-Authenticate-Job>
-    Require user @OWNER @SYSTEM
-    Order deny,allow
-  </Limit>
-  <Limit All>
-    Order deny,allow
-  </Limit>
-</Policy>
-<Policy authenticated>
-  JobPrivateAccess default
-  JobPrivateValues default
-  SubscriptionPrivateAccess default
-  SubscriptionPrivateValues default
-  <Limit Create-Job Print-Job Print-URI Validate-Job>
-    AuthType Default
-    Order deny,allow
-  </Limit>
-  <Limit Send-Document Send-URI Hold-Job Release-Job Restart-Job Purge-Jobs Set-Job-Attributes Create-Job-Subscription Renew-Subscription Cancel-Subscription Get-Notifications Reprocess-Job Cancel-Current-Job Suspend-Current-Job Resume-Job Cancel-My-Jobs Close-Job CUPS-Move-Job CUPS-Get-Document>
-    AuthType Default
-    Require user @OWNER @SYSTEM
-    Order deny,allow
-  </Limit>
-  <Limit CUPS-Add-Modify-Printer CUPS-Delete-Printer CUPS-Add-Modify-Class CUPS-Delete-Class CUPS-Set-Default>
+    Order allow,deny
+    Allow @Local
+  </Location>
+  <Location /admin/log>
     AuthType Default
     Require user @SYSTEM
-    Order deny,allow
-  </Limit>
-  <Limit Pause-Printer Resume-Printer Enable-Printer Disable-Printer Pause-Printer-After-Current-Job Hold-New-Jobs Release-Held-New-Jobs Deactivate-Printer Activate-Printer Restart-Printer Shutdown-Printer Startup-Printer Promote-Job Schedule-Job-After Cancel-Jobs CUPS-Accept-Jobs CUPS-Reject-Jobs>
-    AuthType Default
-    Require user @SYSTEM
-    Order deny,allow
-  </Limit>
-  <Limit Cancel-Job CUPS-Authenticate-Job>
-    AuthType Default
-    Require user @OWNER @SYSTEM
-    Order deny,allow
-  </Limit>
-  <Limit All>
-    Order deny,allow
-  </Limit>
-</Policy>
-EOF
+    Order allow,deny
+    Allow @Local
+  </Location>
+  <Policy default>
+    JobPrivateAccess default
+    JobPrivateValues default
+    SubscriptionPrivateAccess default
+    SubscriptionPrivateValues default
+    <Limit Create-Job Print-Job Print-URI Validate-Job>
+      Order deny,allow
+    </Limit>
+    <Limit Send-Document Send-URI Hold-Job Release-Job Restart-Job Purge-Jobs Set-Job-Attributes Create-Job-Subscription Renew-Subscription Cancel-Subscription Get-Notifications Reprocess-Job Cancel-Current-Job Suspend-Current-Job Resume-Job Cancel-My-Jobs Close-Job CUPS-Move-Job CUPS-Get-Document>
+      Require user @OWNER @SYSTEM
+      Order deny,allow
+    </Limit>
+    <Limit CUPS-Add-Modify-Printer CUPS-Delete-Printer CUPS-Add-Modify-Class CUPS-Delete-Class CUPS-Set-Default CUPS-Get-Devices>
+  #    Keeps asking for user/password when adding printer
+  #    AuthType Default
+  #    Require user @SYSTEM
+      Order deny,allow
+    </Limit>
+    <Limit Pause-Printer Resume-Printer Enable-Printer Disable-Printer Pause-Printer-After-Current-Job Hold-New-Jobs Release-Held-New-Jobs Deactivate-Printer Activate-Printer Restart-Printer Shutdown-Printer Startup-Printer Promote-Job Schedule-Job-After Cancel-Jobs CUPS-Accept-Jobs CUPS-Reject-Jobs>
+      AuthType Default
+      Require user @SYSTEM
+      Order deny,allow
+    </Limit>
+    <Limit CUPS-Authenticate-Job>
+      Require user @OWNER @SYSTEM
+      Order deny,allow
+    </Limit>
+    <Limit All>
+      Order deny,allow
+    </Limit>
+  </Policy>
+  <Policy authenticated>
+    JobPrivateAccess default
+    JobPrivateValues default
+    SubscriptionPrivateAccess default
+    SubscriptionPrivateValues default
+    <Limit Create-Job Print-Job Print-URI Validate-Job>
+      AuthType Default
+      Order deny,allow
+    </Limit>
+    <Limit Send-Document Send-URI Hold-Job Release-Job Restart-Job Purge-Jobs Set-Job-Attributes Create-Job-Subscription Renew-Subscription Cancel-Subscription Get-Notifications Reprocess-Job Cancel-Current-Job Suspend-Current-Job Resume-Job Cancel-My-Jobs Close-Job CUPS-Move-Job CUPS-Get-Document>
+      AuthType Default
+      Require user @OWNER @SYSTEM
+      Order deny,allow
+    </Limit>
+    <Limit CUPS-Add-Modify-Printer CUPS-Delete-Printer CUPS-Add-Modify-Class CUPS-Delete-Class CUPS-Set-Default>
+      AuthType Default
+      Require user @SYSTEM
+      Order deny,allow
+    </Limit>
+    <Limit Pause-Printer Resume-Printer Enable-Printer Disable-Printer Pause-Printer-After-Current-Job Hold-New-Jobs Release-Held-New-Jobs Deactivate-Printer Activate-Printer Restart-Printer Shutdown-Printer Startup-Printer Promote-Job Schedule-Job-After Cancel-Jobs CUPS-Accept-Jobs CUPS-Reject-Jobs>
+      AuthType Default
+      Require user @SYSTEM
+      Order deny,allow
+    </Limit>
+    <Limit Cancel-Job CUPS-Authenticate-Job>
+      AuthType Default
+      Require user @OWNER @SYSTEM
+      Order deny,allow
+    </Limit>
+    <Limit All>
+      Order deny,allow
+    </Limit>
+  </Policy>
+  EOF
 ```
 
 * Enabled and restart the **CUPS** service
