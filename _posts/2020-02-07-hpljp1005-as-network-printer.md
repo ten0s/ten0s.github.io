@@ -5,7 +5,7 @@ date: 2020-02-07
 ---
 ### Generic Print Server Setup
 
-* Setup Raspbian on SD card as described [here](/2020/01/26/setup-raspbian-buster-on-sd-card), but change the device name to **printerpi**.
+* Setup Raspbian on SD card as described [here](/blog/2020/01/26/setup-raspbian-buster-on-sd-card), but change the device name to **printerpi**.
 
 * SSH to device
 ```

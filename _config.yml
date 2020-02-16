@@ -6,6 +6,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ten0s
 
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
 plugins:
   - jekyll-feed
 
