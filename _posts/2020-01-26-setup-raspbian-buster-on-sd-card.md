@@ -2,8 +2,9 @@
 layout: post
 title: Setup Raspbian Buster on SD card
 date: 2020-01-26
-categories: rpi
 ---
+## Setup Raspbian Buster on SD card
+
 * Download the latest image from [https://www.raspberrypi.org/downloads/raspbian/](https://www.raspberrypi.org/downloads/raspbian/)
 ```
 $ wget --trust-server-names https://downloads.raspberrypi.org/raspbian_lite_latest
