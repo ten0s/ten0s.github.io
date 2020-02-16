@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Setup Raspbian on SD card
 ---
 ## Setup Raspbian on SD card
