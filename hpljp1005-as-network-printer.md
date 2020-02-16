@@ -1,9 +1,10 @@
 ---
-title: Setup Print Server on Raspberry Pi
+layout: default
+title: HP LaserJet P1005 as Network Printer
 ---
-## Setup Print Server on Raspberry Pi
+## HP LaserJet P1005 as Network Printer
 
-### Generic Setup
+### Generic Print Server Setup
 
 * Setup Raspbian on SD card as described [here](setup-raspbian-on-sd-card), but change the device name to **printerpi**.
 
@@ -171,7 +172,7 @@ $ sudo systemctl restart nmbd
 
 **NB**: You can find the above setup automated using [Ansible](https://www.ansible.com/) [here](https://github.com/ten0s/rpi).
 
-### HP LaserJet P1005 Setup
+### Setup HP LaserJet P1005
 
 * Plug-in and switch on the printer
 * List available firmware files
