@@ -120,7 +120,7 @@ $ sudo raspi-config
   * Change User Password (passwd)
   * Network Options
     * N1 Hostname (/etc/hostname, /etc/hosts)
-  * Localisation Options
+  * Localization Options
     * I1 Change Locale: en_US.UTF-8 UTF-8
     * I2 Change Timezone (/etc/localtime)
 
