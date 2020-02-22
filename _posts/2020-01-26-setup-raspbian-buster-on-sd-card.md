@@ -67,7 +67,7 @@ $ sudo mount -t vfat /dev/mmcblk0p1 /mnt/boot
 $ sudo touch /mnt/boot/ssh
 ```
 
-* Enable WIFI (optional). Replace \<SSID\> and \<SECRET\> with correct values
+* Enable Wi-Fi (optional). Replace \<SSID\> and \<SECRET\> with correct values
 ```
 $ sudo tee /mnt/boot/wpa_supplicant.conf << EOF
 country=US
@@ -89,7 +89,7 @@ $ sudo umount /mnt/boot
 
 * Remove SD card from card reader
 * Insert SD card into Raspberry Pi
-* Plug-in LAN cable (or use WIFI) and power supply.
+* Plug-in LAN cable (or use Wi-Fi) and power supply.
 * After a couple of minutes you should be able to ping
 ```
 $ ping -c 1 raspberrypi
