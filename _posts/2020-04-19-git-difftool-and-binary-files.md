@@ -11,6 +11,12 @@ are generic enough to be ported to other platforms.
 
 ### Setup
 
+Install [meld](https://meldmerge.org/), [pandoc](https://pandoc.org) and [unoconv](https://github.com/unoconv/unoconv):
+
+```
+$ sudo apt install meld pandoc unoconv
+```
+
 Create an empty git repo:
 
 ```
@@ -93,7 +99,6 @@ A filter is a program that reads a binary file and prints its textual presentati
 Let's setup the filters now.
 
 I use [pandoc](https://pandoc.org) for Word and [unoconv](https://github.com/unoconv/unoconv) for Excel to keep things more interesting.
-Both [pandoc](https://pandoc.org) and [unoconv](https://github.com/unoconv/unoconv) should be somewhere in $PATH.
 
 Add the below to .git/config:
 
@@ -157,7 +162,7 @@ To make **difftool** work, add the below to .git/config:
     cmd = t1=`mktemp` && `pandoc --to=plain $LOCAL --output=$t1` && t2=`mktemp` && `pandoc --to=plain $REMOTE --output=$t2` && meld $t1 $t2 && rm -f $t1 $t2
 
 [difftool "xlsx"]
-    cmd = t1=`mktemp` && `unoconv --format csv --stdout $LOCAL >$t1` && t2=`mktemp` && `unoconv --format csv --stdout $REMOTE >$t2` && meld $t1 $t2 && rm -f $t1 $t2
+    cmd = t1=`mktemp` && `unoconv --format=csv --stdout $LOCAL >$t1` && t2=`mktemp` && `unoconv --format=csv --stdout $REMOTE >$t2` && meld $t1 $t2 && rm -f $t1 $t2
 ```
 
 Now you can run:
@@ -295,7 +300,10 @@ $ cd git-difftool-for-binaries
 $ git config --local include.path $PWD/.gitconfig
 ```
 
-Ensure that [pandoc](https://pandoc.org) and [unoconv](https://github.com/unoconv/unoconv) are available.
+```
+$ sudo apt install meld pandoc unoconv
+```
+
 Copy git-auto-diff.sh to $PATH and you are all set!
 
 
