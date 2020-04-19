@@ -287,7 +287,7 @@ Still, I found that [unoconv](https://github.com/unoconv/unoconv) is not stable 
 
 ## Code
 
-You can find the code [here](https://github.com/ten0s/https://github.com/ten0s/git-difftool-and-binaries-files).
+You can find the code [here](https://github.com/ten0s/git-difftool-and-binaries-files).
 
 ```
 $ git clone https://github.com/ten0s/https://github.com/ten0s/git-difftool-and-binaries-files
