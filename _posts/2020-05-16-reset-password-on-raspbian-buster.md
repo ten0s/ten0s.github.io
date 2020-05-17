@@ -118,8 +118,8 @@ The file **cmdline.txt** needs to be edited back, but it's on the **/boot** part
 
 * Reboot
 
-## References:
+## References
 
-* http://mapledyne.com/ideas/2015/8/4/reset-lost-admin-password-for-raspberry-pi
-* https://www.raspberrypi.org/forums/viewtopic.php?t=20397
-* https://www.redhat.com/archives/rhl-list/2005-March/msg04089.html
+* [http://mapledyne.com/ideas/2015/8/4/reset-lost-admin-password-for-raspberry-pi](http://mapledyne.com/ideas/2015/8/4/reset-lost-admin-password-for-raspberry-pi)
+* [https://www.raspberrypi.org/forums/viewtopic.php?t=20397](https://www.raspberrypi.org/forums/viewtopic.php?t=20397)
+* [https://www.redhat.com/archives/rhl-list/2005-March/msg04089.html](https://www.redhat.com/archives/rhl-list/2005-March/msg04089.html)
