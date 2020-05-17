@@ -89,7 +89,7 @@ The file **cmdline.txt** needs to be edited back, but it's on the **/boot** part
 * Mount the **/boot** partition:
 
 ```
-# mount /dev/mmcblk0p1 /boot
+# mount -o rw /dev/mmcblk0p1 /boot
 ```
 
 * Open the file for editing:
