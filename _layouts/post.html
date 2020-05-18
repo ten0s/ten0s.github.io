@@ -2,15 +2,11 @@
 layout: default
 ---
 <h1>{{ page.title }}</h1>
+
 <p class="meta">{{ page.date | date_to_string }}</p>
+
 <div class="post">
   {{ content }}
 </div>
-<script src="https://utteranc.es/client.js"
-        repo="ten0s/ten0s.github.io"
-        issue-term="title"
-        label="comments"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+
+{% include comments.html %}
