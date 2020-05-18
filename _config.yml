@@ -10,6 +10,8 @@ permalink: /blog/:year/:month/:day/:title
 plugins:
   - jekyll-feed
 
+google_analytics: UA-166991530-1
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
