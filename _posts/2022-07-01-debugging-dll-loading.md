@@ -8,7 +8,7 @@ date: 2022-07-01
 
 You made an application that works fine in your development environment,
 but fails to start in clear environment.
-You seemed to copy all needed DLLs, but the error dialog like below keeps showing up.
+You seemed to copy all the needed DLLs, but the error dialog like below keeps showing up.
 
     TODO ADD_IMAGE_HERE
 
@@ -62,7 +62,7 @@ already installed. If not, install them otherwise.
    ... ERROR: Unable to load DLL: "some-dll-name.dll",
    ```
 
-7. Copy **some-dll-name.dll** to current directory
+7. Copy **some-dll-name.dll** to the current directory
 
    ```
    > copy PATH_TO\some-dll-name.dll .
