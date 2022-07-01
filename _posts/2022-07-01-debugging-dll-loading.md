@@ -31,7 +31,7 @@ already installed. If not, install them otherwise.
 2. Go to directory where **APP.exe** is located
 
    ```
-   > cd PATH_TO_APP.exe
+   > cd PATH_TO\APP.exe
    ```
 
 3. Add **gflags**, **WinDbg**, **CDB** to **PATH**
