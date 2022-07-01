@@ -59,16 +59,16 @@ already installed. If not, install them otherwise.
 
 
    ```
-   ... ERROR: Unable to load DLL: "some-dll-name.dll",
+   ... ERROR: Unable to load DLL: "some-name.dll",
    ```
 
-7. Copy **some-dll-name.dll** to the current directory
+7. Copy **some-name.dll** to the current directory
 
    ```
-   > copy PATH_TO\some-dll-name.dll .
+   > copy PATH_TO\some-name.dll .
    ```
 
-8. Continue the steps 5 to 7 until there're no more DLL loading errors
+8. Continue the steps 5 to 7 until there's no more DLL loading errors
 
 9. Disable loader snaps for **APP.exe**
 
