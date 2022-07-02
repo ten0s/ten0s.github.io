@@ -6,7 +6,7 @@ date: 2022-07-01
 
 ## Problem
 
-You made an application that works fine in your development environment,
+You've made an application that works fine in your development environment,
 but fails to start in clear environment.
 You seemed to copy all the needed DLLs, but the error dialog like below keeps showing up.
 
@@ -15,13 +15,13 @@ You seemed to copy all the needed DLLs, but the error dialog like below keeps sh
 
 ## Prerequisites
 
-1. Some application fails to load due to DLL(s) loading error
+1. Some application fails to load due to DLL(s) loading error.
 
 2. You know where to get the missing DLL(s) from. For example, MSYS2/MinGW64/GTK DLLs, see [Example](#example)
 
 3. You have
 [Debugging Tools for Windows](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools)
-already installed. If not, install them otherwise.
+already installed.
 
 
 ## Debugging algorithm
