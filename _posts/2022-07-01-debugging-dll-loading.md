@@ -10,8 +10,7 @@ You've made an application that works fine in your development environment,
 but fails to start in clear environment.
 You seemed to copy all the needed DLLs, but the error dialog like below keeps showing up.
 
-    TODO ADD_IMAGE_HERE
-
+![](/assets/images/debugging-dll-loading/dll-loading-error.png)
 
 ## Prerequisites
 
@@ -107,7 +106,8 @@ You continue the above commands sequence until you have no more DLLs to load
 
 ## Post Scriptum
 
-For simple cases [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) or even [Dependency Walker](https://dependencywalker.com/) might be easier to use.
+For simple cases [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) or
+even [Dependency Walker](https://dependencywalker.com/) might be easier to use.
 
 ## References
 
