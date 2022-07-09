@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Debugging DLLs Loading (WIP)
+title: Debugging DLLs Loading
 date: 2022-07-01
 ---
 
