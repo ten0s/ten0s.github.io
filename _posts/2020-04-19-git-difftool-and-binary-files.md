@@ -292,11 +292,11 @@ Still, I found that [unoconv](https://github.com/unoconv/unoconv) is not stable 
 
 ## Code
 
-You can find the code [here](https://github.com/ten0s/git-difftool-and-binaries-files).
+You can find the code [here](https://github.com/ten0s/blog-code/tree/main/git-difftool-and-binaries-files).
 
 ```
-$ git clone https://github.com/ten0s/git-difftool-and-binaries-files
-$ cd git-difftool-for-binaries
+$ git clone https://github.com/ten0s/blog-code.git
+$ cd blog-code/git-difftool-and-binaries-files
 $ git config --local include.path $PWD/.gitconfig
 ```
 
