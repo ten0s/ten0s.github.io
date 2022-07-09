@@ -77,7 +77,7 @@ already installed.
 
 10. You're done
 
-### Example
+## Example
 
 
 ```
@@ -97,12 +97,6 @@ already installed.
 ```
 
 You continue the above commands sequence until you have no more DLLs to load
-
-### Disable loader snaps for APP.exe
-
-```
-> gflags /i APP.exe -sls
-```
 
 ## Post Scriptum
 
