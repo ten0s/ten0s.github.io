@@ -14,7 +14,7 @@ You seemed to copy all the needed DLLs, but the error dialog like below keeps sh
 
 ## Prerequisites
 
-1. Some application fails to load due to DLL(s) loading error.
+1. Some application fails to start due to DLL loading errors.
 
 2. You know where to get the missing DLL(s) from. For example, MSYS2/MinGW64/Cygwin/GTK DLLs, see [Example](#example)
 
