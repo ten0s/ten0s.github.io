@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Debugging DLLs Loading
+title: Debugging DLL Loading Errors
 date: 2022-07-01
 ---
 
@@ -10,7 +10,7 @@ You've made an application that works fine in your development environment,
 but fails to start in clear environment.
 You seemed to copy all the needed DLLs, but the error dialog like below keeps showing up.
 
-![](/assets/images/debugging-dll-loading/dll-loading-error.png)
+![](/assets/images/debugging-dll-loading-errors/dll-loading-error.png)
 
 ## Prerequisites
 
