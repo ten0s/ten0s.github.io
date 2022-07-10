@@ -96,7 +96,7 @@ already installed.
         1 file(s) copied.
 ```
 
-You continue the above commands sequence until you have no more DLL loading errors.
+You continue the above commands sequence until there's no more DLL loading errors.
 
 ## Post Scriptum
 
