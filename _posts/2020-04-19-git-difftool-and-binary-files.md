@@ -91,7 +91,7 @@ Add the below to .gitattributes file:
 *.xlsx diff=xlsx
 ```
 
-This line says that *.docx files should go through the **docx** filter and
+The above lines say that *.docx files should go through the **docx** filter and
 *.xlsx files should go though the **xlsx** filter.
 
 A filter is a program that reads a binary file and prints its textual presentation.
