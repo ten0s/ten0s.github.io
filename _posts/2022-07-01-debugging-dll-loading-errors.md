@@ -81,7 +81,7 @@ already installed.
 
 
 ```
-> cdb -c "g;q" node src\main.js 2>nul | findstr /R /c:"Unable to load DLL: \".*\.dll\""
+> cdb -c "g;q" node src\main.js 2>nul | findstr /R /c:"Unable to load DLL: .*\.dll"
 ... LdrpProcessWork - ERROR: Unable to load DLL: "libglib-2.0-0.dll", ...
 ... LdrpProcessWork - ERROR: Unable to load DLL: "libgmodule-2.0-0.dll", ...
 ```
@@ -96,7 +96,7 @@ already installed.
         1 file(s) copied.
 ```
 
-You continue the above commands sequence until you have no more DLLs to load
+You continue the above commands sequence until you have no more DLL loading errors.
 
 ## Post Scriptum
 
