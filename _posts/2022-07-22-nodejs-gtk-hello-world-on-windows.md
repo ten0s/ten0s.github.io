@@ -5,8 +5,7 @@ date: 2022-07-22
 ---
 
 Recently I helped porting [Node-Gtk](https://github.com/romgrk/node-gtk) to Windows and since
-[VeLisp](https://github.com/ten0s/velisp) is probably the first project that use it on Windows,
-so I'm in a good position to share what I have learned along the way.
+[VeLisp](https://github.com/ten0s/velisp) is probably the first project that use it on Windows, I think I'm in a good position to share what I have learned along the way.
 
 The below you will find the steps how to make [GTK](https://www.gtk.org/) Hello World application
 using [Node.js](https://nodejs.org/). In the [next post](TODO) we will know how to determine dependencies
