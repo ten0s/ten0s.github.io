@@ -47,7 +47,7 @@ already installed.
 
 5. Run **APP.exe** under **WinDbg** or **CDB**
 
-   I found that using **CDB** to find and copy the missing DLL(s) to be much more convenient than
+   I found that using **CDB** to find and copy the missing DLL(s) is much more convenient than
    using **WinDbg**, since you don't leave the terminal.
 
    ```
@@ -97,6 +97,8 @@ already installed.
 ```
 
 You continue the above commands sequence until there's no more DLL loading errors.
+
+See real-world example [here]({{ site.baseurl }}{% post_url 2022-07-25-find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows %}).
 
 ## Post Scriptum
 

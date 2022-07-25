@@ -4,12 +4,13 @@ title: Node.js GTK Hello World on Windows
 date: 2022-07-22
 ---
 
-Recently I helped porting [Node-Gtk](https://github.com/romgrk/node-gtk) to Windows and since
-[VeLisp](https://github.com/ten0s/velisp) is probably the first project that use it on Windows, I think I'm in a good position to share what I have learned along the way.
+Recently I helped porting [Node-Gtk](https://github.com/romgrk/node-gtk) to Windows. I also use it in
+[VeLisp](https://github.com/ten0s/velisp) and it is probably the first usage on Windows,
+so I think I'm in a good position to share what I have learned along the way.
 
-The below you will find the steps how to make [GTK](https://www.gtk.org/) Hello World application
-using [Node.js](https://nodejs.org/). In the [next post](TODO) we will know how to determine dependencies
-(DLLs and TypeLibs) needed for distribution and how to start the application without showing the terminal prompt.
+The below you will find the steps how to make [GTK](https://www.gtk.org/) Hello World application using [Node.js](https://nodejs.org/).
+In the [next post]({{ site.baseurl }}{% post_url 2022-07-25-find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows %})
+we will find the dependencies (DLLs and Typelibs) needed for distribution and start the application without showing the terminal prompt.
 
 ## Table of contents
 
@@ -128,10 +129,8 @@ $ npm rebuild node-gtk
 
 Run the application
 
+**index.js**:
 
-```
-$ cat index.js
-```
 
 ```javascript
 const gi = require('node-gtk')
@@ -165,5 +164,5 @@ It works! At this point you've got everything to start developing
 
 ## What's next?
 
-In the [next post](TODO) we will know how to determine dependencies (DLLs and TypeLibs) needed for distribution and
-how to start the application without showing the terminal prompt.
+In the [next post]({{ site.baseurl }}{% post_url 2022-07-25-find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows %})
+we will find the dependencies (DLLs and Typelibs) needed for distribution and start the application without showing the terminal prompt.
