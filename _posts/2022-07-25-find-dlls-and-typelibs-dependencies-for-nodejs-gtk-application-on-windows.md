@@ -68,7 +68,7 @@ Now let's run the application inside the MSYS shell:
 
 ```
 $ cd blog-code/nodejs-gtk-hello-world-on-windows/
-$ node index.js
+$ node.exe index.js
 node:internal/modules/cjs/loader:1189
   return process.dlopen(module, path.toNamespacedPath(filename));
                  ^
@@ -118,7 +118,7 @@ Now run the application under the debugger. I found that using **CDB** to find a
 It also creates the opportunity to automate the whole searching process, see [below](#automate-the-dependencies-search).
 
 ```
-$ cdb -c "g;q" node index.js 2>&1 | grep 'Unable to load DLL'
+$ cdb -c "g;q" node.exe index.js 2>&1 | grep 'Unable to load DLL'
 1ed8:0c80 @ 12843406 - LdrpProcessWork - ERROR: Unable to load DLL: "libglib-2.0-0.dll", Parent Module: "\\?\C:\msys64\home\someo\blog-code\nodejs-gtk-hello-world-on-windows\node_modules\node-gtk\lib\binding\node-v93-win32-x64\node_gtk.node", Status: 0xc0000135
 1ed8:1bfc @ 12843406 - LdrpProcessWork - ERROR: Unable to load DLL: "libgmodule-2.0-0.dll", Parent Module: "\\?\C:\msys64\home\someo\blog-code\nodejs-gtk-hello-world-on-windows\node_modules\node-gtk\lib\binding\node-v93-win32-x64\node_gtk.node", Status: 0xc0000135
 1ed8:22e8 @ 12843406 - LdrpProcessWork - ERROR: Unable to load DLL: "libgobject-2.0-0.dll", Parent Module: "\\?\C:\msys64\home\someo\blog-code\nodejs-gtk-hello-world-on-windows\node_modules\node-gtk\lib\binding\node-v93-win32-x64\node_gtk.node", Status: 0xc0000135
@@ -139,7 +139,7 @@ $ cp /mingw64/bin/libffi-7.dll .
 Run the application under the debugger again.
 
 ```
-$ cdb -c "g;q" node index.js 2>&1 | grep 'Unable to load DLL'
+$ cdb -c "g;q" node.exe index.js 2>&1 | grep 'Unable to load DLL'
 1574:2320 @ 13696515 - LdrpProcessWork - ERROR: Unable to load DLL: "libgirepository-1.0-1.dll", Parent Module: "\\?\C:\msys64\home\someo\blog-code\nodejs-gtk-hello-world-on-windows\node_modules\node-gtk\lib\binding\node-v93-win32-x64\node_gtk.node", Status: 0xc0000135
 1574:1690 @ 13696515 - LdrpProcessWork - ERROR: Unable to load DLL: "libcairo-2.dll", Parent Module: "\\?\C:\msys64\home\someo\blog-code\nodejs-gtk-hello-world-on-windows\node_modules\node-gtk\lib\binding\node-v93-win32-x64\node_gtk.node", Status: 0xc0000135
 1574:1304 @ 13696515 - LdrpProcessWork - ERROR: Unable to load DLL: "libintl-8.dll", Parent Module: "C:\msys64\home\someo\blog-code\nodejs-gtk-hello-world-on-windows\libglib-2.0-0.dll", Status: 0xc0000135
@@ -149,7 +149,7 @@ $ cdb -c "g;q" node index.js 2>&1 | grep 'Unable to load DLL'
 We see that there is a different set of DLLs reported. Repeating the debug-and-copy loop long enough we will reach the point where there is no more DLL loading errors reported.
 
 ```
-$ cdb -c "g;q" node index.js 2>&1 | grep 'Unable to load DLL'
+$ cdb -c "g;q" node.exe index.js 2>&1 | grep 'Unable to load DLL'
 ```
 
 
@@ -158,7 +158,7 @@ $ cdb -c "g;q" node index.js 2>&1 | grep 'Unable to load DLL'
 Run the application without the debugger.
 
 ```
-$ node index.js
+$ node.exe index.js
 C:\msys64\home\someo\blog-code\nodejs-gtk-hello-world-on-windows\node_modules\node-gtk\lib\bootstrap.js:10
 const GI = internal.Bootstrap();
                     ^
@@ -188,7 +188,7 @@ $ cp /mingw64/lib/girepository-1.0/GIRepository-2.0.typelib lib/girepository-1.0
 Run the application again.
 
 ```
-$ node index.js
+$ node.exe index.js
 C:\msys64\home\someo\blog-code\nodejs-gtk-hello-world-on-windows\node_modules\node-gtk\lib\bootstrap.js:10
 const GI = internal.Bootstrap();
                     ^
@@ -210,7 +210,7 @@ We see that there is a different Typelib reported. Repeating the run-and-copy lo
 but again there are DLL loading errors.
 
 ```
-$ node index.js
+$ node.exe index.js
 
 ** (process:2216): WARNING **: 10:46:46.213: Failed to load shared library 'libgdk_pixbuf-2.0-0.dll' referenced by the typelib: 'libgdk_pixbuf-2.0-0.dll':The specified module could not be found.
 Couldn't load GdkPixbuf.Pixbuf: 'libgdk_pixbuf-2.0-0.dll': The specified module could not be found.
@@ -229,7 +229,7 @@ Couldn't load GdkPixbuf.PixbufSimpleAnimIter: (NULL)
 Run the application under the debugger.
 
 ```
-$ cdb -c "g;q" node index.js 2>&1 | grep 'Unable to load DLL'
+$ cdb -c "g;q" node.exe index.js 2>&1 | grep 'Unable to load DLL'
 1e48:1e00 @ 15502968 - LdrpProcessWork - ERROR: Unable to load DLL: "libgdk_pixbuf-2.0-0.dll", Parent Module: "(null)", Status: 0xc0000135
 1e48:1e00 @ 15503078 - LdrpProcessWork - ERROR: Unable to load DLL: "libharfbuzz-gobject-0.dll", Parent Module: "(null)", Status: 0xc0000135
 1e48:1e00 @ 15503265 - LdrpProcessWork - ERROR: Unable to load DLL: "libcairo-gobject-2.dll", Parent Module: "(null)", Status: 0xc0000135
