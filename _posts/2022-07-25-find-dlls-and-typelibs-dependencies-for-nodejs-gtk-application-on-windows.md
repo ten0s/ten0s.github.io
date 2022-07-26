@@ -99,10 +99,10 @@ $ export PATH="/c/Program Files (x86)/Windows Kits/10/Debuggers/x64/":$PATH
 ```
 
 
-Unfortunately, the command below doesn't work in the MSYS shell.
+Unfortunately, the command below doesn't work in the MSYS shell by default (run it as administrator otherwise)
 
 ```
-$ gflags /i node.exe.exe +sls
+$ gflags -i node.exe.exe +sls
 ```
 
 Anyway, run the command below or go to **Start** -> **Windows Kits** -> **Global Flags (X64)**
@@ -255,7 +255,19 @@ Write the script **copy-mingw64-deps.sh**:
 ```bash
 #!/bin/bash
 
-mkdir -p ./lib/girepository-1.0/
+function is-sls-enabled() {
+    IMAGE=$1
+    reg query "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\$IMAGE" | grep -Eq "GlobalFlag\s+REG_SZ\s+0x00000002"
+}
+
+function is-cdb-available() {
+    cdb &>/dev/null
+    if [[ $? -eq 2 ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
 
 function copy-dlls() {
     LOG=$1
@@ -277,9 +289,32 @@ function copy-typelibs() {
     done
 }
 
+if [[ $# -lt 1 ]]; then
+    echo "Usage: $(basename $0) COMMAND [ARG...]"
+    exit 1
+fi
+
+COMMAND=$1
+shift
+ARGS="$@"
+
+if ! is-sls-enabled $COMMAND; then
+    echo "Enable Show Loader Snaps (sls) for $COMMAND and try again"
+    exit 1
+fi
+
+if ! is-cdb-available; then
+    echo "CDB is not found"
+    echo "Run the command below and try again"
+    echo 'export PATH="/c/Program Files (x86)/Windows Kits/10/Debuggers/x64/":$PATH'
+    exit 1
+fi
+
+mkdir -p ./lib/girepository-1.0/
+
 TEMP=$(mktemp)
 while true; do
-    cdb -c "g;q" node index.js &>$TEMP
+    cdb -c "g;q" $COMMAND $ARGS &>$TEMP
     if [[ $? -ne 0 ]]; then
         copy-dlls $TEMP /mingw64/bin/ ./
         copy-typelibs $TEMP /mingw64/lib/girepository-1.0/ ./lib/girepository-1.0/
@@ -292,14 +327,15 @@ rm $TEMP
 exit 0
 ```
 
-The script is basically a loop on every iteration it runs the application under the debugger and looks for DLL and Typelib errors, in such case
-it copies either DLL or Typelib locally.
+The script first checks that Show Loader Snaps are enabled for a given command (node.exe in our case) and CDB is available and
+then it is basically a loop on every iteration it runs the application under the debugger and looks for DLL and Typelib errors,
+in such case it copies either DLL or Typelib locally.
 
 
 Run the script:
 
 ```
-$ ./copy-mingw64-deps.sh
+$ ./copy-mingw64-deps.sh node.exe index.js
 '/mingw64/bin//libgmodule-2.0-0.dll' -> './libgmodule-2.0-0.dll'
 '/mingw64/bin//libgobject-2.0-0.dll' -> './libgobject-2.0-0.dll'
 '/mingw64/bin//libglib-2.0-0.dll' -> './libglib-2.0-0.dll'
