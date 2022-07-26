@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# https://pages.github.com/versions/
+# https://github.com/envygeeks/jekyll-docker
+
+# usage:
+# $ jekyll --help
+# $ jekyll new --force <PATH>
+# $ jekyll build
+# $ jekyll serve
+
+opts[k++]=-it
+opts[k++]=--rm
+opts[k++]=--volume="$PWD:/srv/jekyll"
+opts[k++]=--volume="$PWD/vendor/bundle:/usr/local/bundle"
+if [[ `echo $@ | grep serve` ]]; then
+    opts[k++]=--publish=4000:4000
+fi
+
+export JEKYLL_VERSION=3.8.6
+docker run ${opts[@]} jekyll/jekyll:$JEKYLL_VERSION jekyll "$@"
