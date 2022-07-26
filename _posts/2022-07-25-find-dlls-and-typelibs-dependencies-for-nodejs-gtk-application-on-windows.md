@@ -327,7 +327,7 @@ rm $TEMP
 exit 0
 ```
 
-The script first checks that Show Loader Snaps are enabled for a given command (node.exe in our case) and CDB is available and
+The script first checks that Show Loader Snaps (sls) are enabled for a given command (node.exe in our case) and CDB is available and
 then it is basically a loop on every iteration it runs the application under the debugger and looks for DLL and Typelib errors,
 in such case it copies either DLL or Typelib locally.
 
