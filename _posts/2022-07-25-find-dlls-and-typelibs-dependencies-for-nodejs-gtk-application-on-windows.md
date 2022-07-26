@@ -406,7 +406,7 @@ $ ./copy-mingw64-deps.sh node.exe index.js
 
 It works! At this point you've got all the needed dependencies for the application.
 
-To prove it, let's run the application inside the Command Promt.
+To prove it, let's run the application inside the Command Prompt.
 
 ![Hello Gtk in Command Prompt Image](/assets/images/find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows/hello-gtk-cmd.png)
 
