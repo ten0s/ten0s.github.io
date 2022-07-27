@@ -251,7 +251,7 @@ Remove all the dependencies found.
 $ rm -rf *.dll lib/
 ```
 
-Write the script **copy-mingw64-deps.sh**:
+**copy-mingw64-deps.sh**:
 
 ```bash
 #!/bin/bash
