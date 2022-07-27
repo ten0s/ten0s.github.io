@@ -7,7 +7,8 @@ date: 2022-07-25
 In the [previous post]({{ site.baseurl }}{% post_url 2022-07-22-nodejs-gtk-hello-world-on-windows %})
 we have made a [GTK](https://www.gtk.org/) Hello World application using [Node.js](https://nodejs.org/).
 In this post we will find the dependencies (DLLs and Typelibs) needed for distribution and
-in the [next post](TODO) we will package the application and learn how start it without showing the terminal prompt.
+in the [next post]({{ site.baseurl }}{% post_url 2022-07-27-package-nodejs-gtk-application-on-windows %})
+we will package the application for distribution and learn how start it without showing the terminal prompt.
 
 ## Table of contents
 
@@ -290,16 +291,16 @@ function copy-typelibs() {
 }
 
 if [[ $# -lt 1 ]]; then
-    echo "Usage: $(basename $0) COMMAND [ARG...]"
+    echo "Usage: $(basename $0) PROG [ARG...]"
     exit 1
 fi
 
-COMMAND=$1
+PROG=$1
 shift
 ARGS="$@"
 
-if ! is-sls-enabled $COMMAND; then
-    echo "Enable Show Loader Snaps (sls) for $COMMAND and try again"
+if ! is-sls-enabled $PROG; then
+    echo "Enable Show Loader Snaps (sls) for $PROG and try again"
     exit 1
 fi
 
@@ -314,7 +315,7 @@ mkdir -p ./lib/girepository-1.0/
 
 TEMP=$(mktemp)
 while true; do
-    cdb -c "g;q" $COMMAND $ARGS &>$TEMP
+    cdb -c "g;q" $PROG $ARGS &>$TEMP
     if [[ $? -ne 0 ]]; then
         copy-dlls $TEMP /mingw64/bin/ ./
         copy-typelibs $TEMP /mingw64/lib/girepository-1.0/ ./lib/girepository-1.0/
@@ -327,7 +328,7 @@ rm $TEMP
 exit 0
 ```
 
-The script first checks that Show Loader Snaps (sls) are enabled for a given command (node.exe in our case) and CDB is available and
+The script first checks that Show Loader Snaps (sls) are enabled for a given program (node.exe in our case) and CDB is available and
 then it is basically a loop on every iteration it runs the application under the debugger and looks for DLL and Typelib errors,
 in such case it copies either DLL or Typelib locally.
 
@@ -418,4 +419,5 @@ Don't forget to disable Show Loader Snaps (sls) for **node.exe**
 
 ## What's next?
 
-In the [next post](TODO) we will package the application and learn how to start it without showing the terminal prompt.
+In the [next post]({{ site.baseurl }}{% post_url 2022-07-27-package-nodejs-gtk-application-on-windows %})
+we will package the application for distribution and learn how to start it without showing the terminal prompt.
