@@ -96,7 +96,7 @@ already installed.
         1 file(s) copied.
 ```
 
-You continue the above commands sequence until there's no more DLL loading errors.
+Continue the above commands sequence until there's no more DLL loading errors.
 
 See real-world example [here]({{ site.baseurl }}{% post_url 2022-07-25-find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows %}).
 

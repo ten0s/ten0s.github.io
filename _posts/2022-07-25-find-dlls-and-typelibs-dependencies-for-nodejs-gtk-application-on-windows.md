@@ -116,7 +116,7 @@ $ cmd.exe /C glags
 
 
 Now run the application under the debugger. I found that using **CDB** to find and copy the missing DLLs is much more convenient than using **WinDbg**, since you don't leave the terminal.
-It also creates the opportunity to automate the whole searching process, see [below](#automate-the-dependencies-search).
+It also creates an opportunity to automate the whole searching process, see [below](#automate-the-dependencies-search).
 
 ```
 $ cdb -c "g;q" node.exe index.js 2>&1 | grep 'Unable to load DLL'

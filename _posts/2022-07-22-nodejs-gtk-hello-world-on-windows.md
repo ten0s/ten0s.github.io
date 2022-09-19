@@ -4,13 +4,13 @@ title: Node.js GTK Hello World on Windows
 date: 2022-07-22
 ---
 
-Recently I helped porting [Node-Gtk](https://github.com/romgrk/node-gtk) to Windows. I also use it in
+Recently I helped porting [Node-Gtk](https://github.com/romgrk/node-gtk/pull/327) to Windows. I also use it in
 [VeLisp](https://github.com/ten0s/velisp) and it is probably the first usage on Windows,
 so I think I'm in a good position to share what I have learned along the way.
 
 The below you will find the steps how to make [GTK](https://www.gtk.org/) Hello World application using [Node.js](https://nodejs.org/).
 In the [next post]({{ site.baseurl }}{% post_url 2022-07-25-find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows %})
-we will find the dependencies (DLLs and Typelibs) needed for distribution and start the application without showing the terminal prompt.
+we will find the dependencies (DLLs and Typelibs) needed for distribution and how to start the application without showing the terminal prompt.
 
 ## Table of contents
 
@@ -37,7 +37,7 @@ For this we need to install the Tools for Native Modules.
 
 ![](/assets/images/nodejs-gtk-hello-world-on-windows/nodejs16-tools.png)
 
-If you happen to have Node.js already installed, but without the Tools for Native Modules, fear not, simply go to the
+If you happen to have Node.js already installed, but without the Tools for Native Modules, fear not, simply go to the Node.js
 installation directory and run `install_tools.bat`.
 
 
@@ -165,4 +165,4 @@ It works! At this point you've got everything to start developing
 ## What's next?
 
 In the [next post]({{ site.baseurl }}{% post_url 2022-07-25-find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows %})
-we will find the dependencies (DLLs and Typelibs) needed for distribution and start the application without showing the terminal prompt.
+we will find the dependencies (DLLs and Typelibs) needed for distribution and how to start the application without showing the terminal prompt.
