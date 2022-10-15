@@ -90,7 +90,7 @@ Error: The specified module could not be found.
 }
 ```
 
-It fails because [Node-Gtk](https://github.com/romgrk/node-gtk) native module has some DLLs missing. But which ones?
+It fails because [Node-Gtk](https://github.com/romgrk/node-gtk) native module is unable to load some DLLs. But which ones?
 To start debugging which DLLs are needed exactly first we need to enable Show Loader Snaps (sls) for **node.exe** to get extended DLLs loading errors in the debugger.
 
 Add **Debugging Tools for Windows** to **PATH**
@@ -116,6 +116,7 @@ $ cmd.exe /C glags
 
 
 Now run the application under the debugger. I found that using **CDB** to find and copy the missing DLLs is much more convenient than using **WinDbg**, since you don't leave the terminal.
+The commands "g;q" mean start debugging (go) and quit (q) on error.
 It also creates an opportunity to automate the whole searching process, see [below](#automate-the-dependencies-search).
 
 ```
