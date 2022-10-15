@@ -30,7 +30,7 @@ already installed.
 2. Go to directory where **APP.exe** is located
 
    ```
-   > cd PATH_TO\APP.exe
+   > cd PATH_TO_APP
    ```
 
 3. Add **gflags**, **WinDbg**, **CDB** to **PATH**
@@ -48,7 +48,8 @@ already installed.
 5. Run **APP.exe** under **WinDbg** or **CDB**
 
    I found that using **CDB** to find and copy the missing DLL(s) is much more convenient than
-   using **WinDbg**, since you don't leave the terminal.
+   using **WinDbg**, since you don't leave the terminal. The commands "g;q" mean start
+   debugging (go) and quit (q) on error.
 
    ```
    > cdb -c "g;q" APP.exe
@@ -64,7 +65,7 @@ already installed.
 7. Copy **some-name.dll** to the current directory
 
    ```
-   > copy PATH_TO\some-name.dll .
+   > copy PATH_TO_DLL\some-name.dll .
    ```
 
 8. Continue the steps 5 to 7 until there's no more DLL loading errors
