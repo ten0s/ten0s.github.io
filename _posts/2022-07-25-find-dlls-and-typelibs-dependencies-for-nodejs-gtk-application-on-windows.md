@@ -239,8 +239,8 @@ $ cdb -c "g;q" node.exe index.js 2>&1 | grep 'Unable to load DLL'
 ```
 
 At this point, if you repeat the debug-and-copy loop discussed [above](#find-needed-dlls) you will find all the needed DLLs and run the application successfully.
-And this is exactly the same process I followed to create the list of [dependencies](https://github.com/ten0s/velisp/blob/0.7.1/windows/copy-mingw64-deps.sh) for [VeLisp](https://github.com/ten0s/velisp).
-But can we do better?
+And this is exactly the same process I followed to create the initial list of [dependencies](https://github.com/ten0s/velisp/blob/0.7.1/windows/copy-mingw64-deps.sh)
+for [VeLisp](https://github.com/ten0s/velisp). But can we do better?
 
 ## Automate the dependencies search
 
