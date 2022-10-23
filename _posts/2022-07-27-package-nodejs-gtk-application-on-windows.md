@@ -253,7 +253,9 @@ For i = 0 To WScript.Arguments.Count - 1
 Next
 
 Set WshShell = WScript.CreateObject("WScript.Shell")
-WshShell.Run Join(Args), 0, False
+HideWindow = 0
+WaitOnReturn = True
+WshShell.Run Join(Args), HideWindow, WaitOnReturn
 ```
 
 Create shortcut for `hello-gtk.exe` and rename it to `hello-gtk.lnk`.
