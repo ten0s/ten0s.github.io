@@ -54,7 +54,7 @@ Otherwise, follow the instructions from [https://www.msys2.org/#installation](ht
 ### Install Windows Terminal
 
 At this point I strongly suggest you to install the [Windows Terminal from the Microsoft Store](https://aka.ms/terminal).
-It is not strictly necessary, but makes the life a bit easier on Windows.
+It is not strictly necessary, but makes life a bit easier on Windows.
 
 After installing the terminal, follow the instructions from [https://www.msys2.org/docs/terminals/#windows-terminal](https://www.msys2.org/docs/terminals/#windows-terminal), but paste the settings below that add Windows PATH to the MinGW64 and MSYS shells:
 
