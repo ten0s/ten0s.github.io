@@ -228,7 +228,7 @@ If you run `hello-gtk.exe` you will also see the Command Prompt.
 
 It's ugly, let's fix it.
 
-**noprompt.vbs**
+**noprompt.vbs**:
 
 ```visualbasic
 REM

@@ -54,7 +54,7 @@ In the [previous post]({{ site.baseurl }}{% post_url 2022-07-22-nodejs-gtk-hello
 
 ![Hello Gtk in MinGW64 Image](/assets/images/find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows/hello-gtk-mingw64.png)
 
-Now it's time to find out what DLLs are needed to run it in clear environment.
+Now it's time to find out what DLLs are needed to run in clear environment.
 
 You might want to review [Debugging DLL Loading Errors]({{ site.baseurl }}{% post_url 2022-07-01-debugging-dll-loading-errors %})
 for a short introduction.

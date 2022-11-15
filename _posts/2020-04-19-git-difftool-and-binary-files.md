@@ -239,9 +239,9 @@ Add the below to .git/config:
 
 Save the below bash script somewhere in your $PATH:
 
-git-auto-diff.sh:
+**git-auto-diff.sh**:
 
-```
+```bash
 #!/bin/bash
 
 DIFF=meld
