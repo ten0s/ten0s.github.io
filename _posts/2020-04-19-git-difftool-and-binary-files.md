@@ -239,6 +239,8 @@ Add the below to .git/config:
 
 Save the below bash script somewhere in your $PATH:
 
+git-auto-diff.sh:
+
 ```
 #!/bin/bash
 
