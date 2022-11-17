@@ -167,7 +167,7 @@ Aзел --4-> Бкр
 
 ![Maze Graph Path Image](/assets/images/maze-manual/maze-graph-path.png)
 
-И вот наше решение:
+И вот найденное решение:
 
 ![Maze Task Path](/assets/images/maze-manual/maze-path.png)
 
