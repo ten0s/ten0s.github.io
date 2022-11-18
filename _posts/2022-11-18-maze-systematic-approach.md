@@ -19,7 +19,7 @@ date: 2022-11-18
 Вы входите в лабиринт в зеленый вход, а выйти нужно из красного выхода,
 при этом нельзя пересекать подряд две линии одного цвета.
 
-![Maze Task Image](/assets/images/maze-manual/maze-task.png)
+![Maze Task Image](/assets/images/maze-systematic-approach/maze-task.png)
 
 Итак, приступим.
 
@@ -27,7 +27,7 @@ date: 2022-11-18
 
 Прежде всего, нужно обозначить линии и комнаты.
 
-![Maze Tagged Image](/assets/images/maze-manual/maze-tagged.png)
+![Maze Tagged Image](/assets/images/maze-systematic-approach/maze-tagged.png)
 
 Обратите внимание:
 
@@ -141,7 +141,7 @@ Aзел --4-> Бкр
 эллипс, каждую линию как зеленую или красную стрелку с соответствующим номером
 линии.
 
-![Maze Graph Image](/assets/images/maze-manual/maze-graph.png)
+![Maze Graph Image](/assets/images/maze-systematic-approach/maze-graph.png)
 
 Обратите внимание:
 
@@ -169,11 +169,11 @@ Aзел --4-> Бкр
 1 4 6 8 6 4 3 15
 ```
 
-![Maze Graph Path Image](/assets/images/maze-manual/maze-graph-path.png)
+![Maze Graph Path Image](/assets/images/maze-systematic-approach/maze-graph-path.png)
 
 И вот найденное решение:
 
-![Maze Task Path](/assets/images/maze-manual/maze-path.png)
+![Maze Task Path](/assets/images/maze-systematic-approach/maze-path.png)
 
 Теперь можно ответить на вопросы:
 
@@ -200,3 +200,7 @@ Aзел --4-> Бкр
 задачи свели к поиску пути от Входа до Выхода этом графе.
 
 Надеюсь у меня получилось и кто-то из вас узнал что-то новое.
+
+---
+
+[Исходный код картинок](https://github.com/ten0s/blog-code/tree/main/maze-systematic-approach)

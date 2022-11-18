@@ -24,8 +24,3 @@ google_analytics: UA-166991530-1
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - src/
-  - vendor/
