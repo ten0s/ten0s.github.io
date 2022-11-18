@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Git difftool and binary files
+description: Human readable git diff of binary files
 date: 2020-04-19
 ---
 Recently I was asked how to see changes in Microsoft Word/Excel documents stored in git.

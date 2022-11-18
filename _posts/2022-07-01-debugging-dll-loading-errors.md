@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Debugging DLL Loading Errors
+description: How to debug MSYS2/MinGW64/Cygwin/GTK/etc DLL loading errors
 date: 2022-07-01
 ---
 

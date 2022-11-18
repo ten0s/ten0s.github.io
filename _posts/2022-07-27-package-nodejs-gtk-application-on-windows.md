@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Package Node.js GTK Application on Windows
+description: How to package Node.js GTK app on Windows for distribution
 date: 2022-07-27
 ---
 

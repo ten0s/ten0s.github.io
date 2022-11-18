@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Raspberry Pi Static IP Address for Android USB Tethering
+description: Raspberry Pi Static IP Address for Android USB Tethering
 date: 2020-02-22
 ---
 Recently I deployed my first Raspberry Pi into

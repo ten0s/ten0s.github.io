@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HP LaserJet P1005 as a Network Printer
+description: Turn HP LaserJet P1005 into a Network Printer
 date: 2020-02-07
 ---
 ### Generic Print Server Setup

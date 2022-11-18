@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Node.js GTK Hello World on Windows
+description: How to make Node.js GTK Hello World on Windows
 date: 2022-07-22
 ---
 

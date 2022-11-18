@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Reset Password on Raspbian Buster
+description: Reset Password on Raspbian Buster
 date: 2020-05-16
 ---
 I recently replaced my laptop, changed ssh key and, as it happens, forgot the password, so I can't ssh to Raspberry Pi any more.
