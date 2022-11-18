@@ -4,7 +4,7 @@ title: Debugging DLL Loading Errors
 date: 2022-07-01
 ---
 
-## Problem
+### Problem
 
 You've made an application that works fine in your development environment,
 but fails to start in clear environment.
@@ -12,7 +12,7 @@ You seemed to copy all the needed DLLs, but the error dialog like below keeps sh
 
 ![](/assets/images/debugging-dll-loading-errors/dll-loading-error.png)
 
-## Prerequisites
+### Prerequisites
 
 1. Some application fails to start due to DLL loading errors.
 
@@ -23,7 +23,7 @@ You seemed to copy all the needed DLLs, but the error dialog like below keeps sh
 already installed.
 
 
-## Debugging algorithm
+### Debugging algorithm
 
 1. Run Command Prompt (**cmd.exe**)
 
@@ -78,7 +78,7 @@ already installed.
 
 10. You're done
 
-## Example
+### Example
 
 
 ```
@@ -101,12 +101,12 @@ Continue the above commands sequence until there's no more DLL loading errors.
 
 See real-world example [here]({{ site.baseurl }}{% post_url 2022-07-25-find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows %}).
 
-## Post Scriptum
+### Post Scriptum
 
 For simple cases [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) or
 even [Dependency Walker](https://dependencywalker.com/) might be easier to use.
 
-## References
+### References
 
 * [GFlags](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/gflags)
 * [WinDbg](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools)

@@ -12,7 +12,7 @@ The below you will find the steps how to make [GTK](https://www.gtk.org/) Hello 
 In the [next post]({{ site.baseurl }}{% post_url 2022-07-25-find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows %})
 we will find the dependencies (DLLs and Typelibs) needed for distribution and how to start the application without showing the terminal prompt.
 
-## Table of contents
+### Table of contents
 
 - [Prerequisites](#prerequisites)
   - [Install Node.js](#install-nodejs)
@@ -23,9 +23,9 @@ we will find the dependencies (DLLs and Typelibs) needed for distribution and ho
 - [What's next?](#whats-next)
 
 
-## Prerequisites
+### Prerequisites
 
-### Install Node.js
+#### Install Node.js
 
 The below steps assume that Node.js 16.x is installed to `C:/nodejs16`.
 
@@ -41,7 +41,7 @@ If you happen to have Node.js already installed, but without the Tools for Nativ
 installation directory and run `install_tools.bat`.
 
 
-### Install MSYS2
+#### Install MSYS2
 
 The below steps assume that MSYS2 is installed to `C:/msys64`.
 
@@ -51,7 +51,7 @@ The below steps assume that MSYS2 is installed to `C:/msys64`.
 Otherwise, follow the instructions from [https://www.msys2.org/#installation](https://www.msys2.org/#installation)
 
 
-### Install Windows Terminal
+#### Install Windows Terminal
 
 At this point I strongly suggest you to install the [Windows Terminal from the Microsoft Store](https://aka.ms/terminal).
 It is not strictly necessary, but makes life a bit easier on Windows.
@@ -75,7 +75,7 @@ After installing the terminal, follow the instructions from [https://www.msys2.o
 }
 ```
 
-### Install GTK development dependencies
+#### Install GTK development dependencies
 
 Start the MinGW64 shell and run:
 
@@ -84,7 +84,7 @@ Start the MinGW64 shell and run:
 $ pacman -S --needed --noconfirm git mingw-w64-$(uname -m)-{gtk3,gobject-introspection,pkg-config,cairo}
 ```
 
-### Check everything is available
+#### Check everything is available
 
 Start the MinGW64 shell and run:
 
@@ -107,7 +107,7 @@ $ gtk3-demo
 Ok, you're all set!
 
 
-## GTK Hello World inside MinGW64
+### GTK Hello World inside MinGW64
 
 You can find the code [here](https://github.com/ten0s/blog-code/tree/main/nodejs-gtk-hello-world-on-windows).
 
@@ -162,7 +162,7 @@ It works! At this point you've got everything to start developing
 
 
 
-## What's next?
+### What's next?
 
 In the [next post]({{ site.baseurl }}{% post_url 2022-07-25-find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows %})
 we will find the dependencies (DLLs and Typelibs) needed for distribution and how to start the application without showing the terminal prompt.

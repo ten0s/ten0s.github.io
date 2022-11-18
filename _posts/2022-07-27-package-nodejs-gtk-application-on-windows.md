@@ -8,7 +8,7 @@ In the [previous post]({{ site.baseurl }}{% post_url 2022-07-25-find-dlls-and-ty
 we have found the dependencies (DLLs and Typelibs) needed for distribution.
 In this post we will package the application for distribution and learn how start it without showing the terminal prompt.
 
-## Table of contents
+### Table of contents
 
 - [House cleaning](#house-cleaning)
 - [Packaging](#packaging)
@@ -17,7 +17,7 @@ In this post we will package the application for distribution and learn how star
 - [What's next?](#whats-next)
 
 
-## House cleaning
+### House cleaning
 
 Alright, we have found all the dependencies, but what the mess we've got in the directory?
 
@@ -159,7 +159,7 @@ Run the application again.
 And it indeed works! Move to packaging...
 
 
-## Packaging
+### Packaging
 
 At this point we have everything in place and we can simply zip the whole directory and send the archive to our users.
 But a couple of problems arise: your users might not have Node.js installed or they might have a different Node.js
@@ -199,7 +199,7 @@ Run the package
 ![Hello Gtk Pkg in MSYS Image](/assets/images/package-nodejs-gtk-application-on-windows/hello-gtk-pkg-msys.png)
 
 
-## Zipping
+### Zipping
 
 Let's make a distribution archive. First install `zip` if you don't have it yet.
 
@@ -214,7 +214,7 @@ $ zip -r hello-gtk.zip hello-gtk.exe noprompt.vbs mingw64/
 ```
 
 
-## Create the shortcut
+### Create the shortcut
 
 Now we have the distribution archive `hello-gtk.zip`. It's time for a final test.
 
@@ -278,7 +278,7 @@ Run the `hello-gtk.lnk` shortcut.
 
 It's done!
 
-## What's next?
+### What's next?
 
 To be a good OSS (Open-source software) citizen you should create NOTICE file(s) for
 Node.js and MinGW64 dependencies. Also, for a serious application you might want to

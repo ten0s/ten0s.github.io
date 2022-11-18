@@ -292,7 +292,7 @@ but as a prove of concept it works just fine.
 
 Still, I found that [unoconv](https://github.com/unoconv/unoconv) is not stable for this use case and something simpler like [Gnumeric](http://www.gnumeric.org/) or [xlsx2csv](https://github.com/dilshod/xlsx2csv) should be used instead.
 
-## Code
+### Code
 
 You can find the code [here](https://github.com/ten0s/blog-code/tree/main/git-difftool-and-binaries-files).
 

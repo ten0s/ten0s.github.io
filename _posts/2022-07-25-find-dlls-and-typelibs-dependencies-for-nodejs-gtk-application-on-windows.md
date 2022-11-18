@@ -10,7 +10,7 @@ In this post we will find the dependencies (DLLs and Typelibs) needed for distri
 in the [next post]({{ site.baseurl }}{% post_url 2022-07-27-package-nodejs-gtk-application-on-windows %})
 we will package the application for distribution and learn how start it without showing the terminal prompt.
 
-## Table of contents
+### Table of contents
 
 - [Prerequisites](#prerequisites)
   - [Install Debugging Tools for Windows](#install-debugging-tools-for-windows)
@@ -21,9 +21,9 @@ we will package the application for distribution and learn how start it without 
 - [What's next?](#whats-next)
 
 
-## Prerequisites
+### Prerequisites
 
-### Install Debugging Tools for Windows
+#### Install Debugging Tools for Windows
 
 If you followed along the [previous post]({{ site.baseurl }}{% post_url 2022-07-22-nodejs-gtk-hello-world-on-windows %})
 you should have the Windows SDK already installed. We also need to install the
@@ -48,7 +48,7 @@ you should have the Windows SDK already installed. We also need to install the
 See [here](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools#adding-the-debugging-tools-for-windows-if-the-sdk-is-already-installed) if you need more detail.
 
 
-## Find needed DLLs
+### Find needed DLLs
 
 In the [previous post]({{ site.baseurl }}{% post_url 2022-07-22-nodejs-gtk-hello-world-on-windows %}) we were able to run the application inside the MinGW64 shell.
 
@@ -155,7 +155,7 @@ $ cdb -c "g;q" node.exe index.js 2>&1 | grep 'Unable to load DLL'
 ```
 
 
-## Find needed Typelibs
+### Find needed Typelibs
 
 Run the application without the debugger.
 
@@ -242,7 +242,7 @@ At this point, if you repeat the debug-and-copy loop discussed [above](#find-nee
 And this is exactly the same process I followed to create the initial list of [dependencies](https://github.com/ten0s/velisp/blob/0.7.1/windows/copy-mingw64-deps.sh)
 for [VeLisp](https://github.com/ten0s/velisp). But can we do better?
 
-## Automate the dependencies search
+### Automate the dependencies search
 
 Let's start from scratch.
 
@@ -414,11 +414,11 @@ To prove it, let's run the application inside the Command Prompt.
 
 And it indeed works!
 
-## Tear down
+### Tear down
 
 Don't forget to disable Show Loader Snaps (sls) for **node.exe**
 
-## What's next?
+### What's next?
 
 In the [next post]({{ site.baseurl }}{% post_url 2022-07-27-package-nodejs-gtk-application-on-windows %})
 we will package the application for distribution and learn how to start it without showing the terminal prompt.

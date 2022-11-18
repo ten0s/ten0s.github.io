@@ -5,7 +5,7 @@ date: 2020-05-16
 ---
 I recently replaced my laptop, changed ssh key and, as it happens, forgot the password, so I can't ssh to Raspberry Pi any more.
 
-## TL;DR
+### TL;DR
 
 Here are quick steps how to reset the password. Later I will describe what they mean and add some more advanced commands.
 
@@ -17,7 +17,7 @@ Here are quick steps how to reset the password. Later I will describe what they 
  rw init=/bin/sh
 ```
 
-* Put the SD card into Raspberry Pi 
+* Put the SD card into Raspberry Pi
 * Reboot
 * Change the user **pi** password:
 
@@ -28,7 +28,7 @@ Retype new password:
 passwd: password updated successfully
 ```
 
-* Flush the file system cache 
+* Flush the file system cache
 
 ```
 # sync
@@ -46,7 +46,7 @@ passwd: password updated successfully
 
 If it's everything you needed you can stop reading.
 
-## rw
+### rw
 
 ```
  rw init=/bin/sh
@@ -70,13 +70,13 @@ To remount it as **r**ead-**w**rite run:
 EXT4-fs (mmcblk0p2): re-mounted.
 ```
 
-## init=/bin/sh
+### init=/bin/sh
 
 The **init** flag specifies the program to run as the [Init](https://en.wikipedia.org/wiki/Init) process, i.e. the first process to be run. Here we replace the default **/sbin/init**, which is responsible for running all the init scripts with **/bin/sh**, which runs a simple shell.
 
-## /boot/cmdline.txt
+### /boot/cmdline.txt
 
-The file **cmdline.txt** needs to be edited back, but it's on the **/boot** partition, which is not mounted by default. Still, it's possible to do it without moving the SD card around. 
+The file **cmdline.txt** needs to be edited back, but it's on the **/boot** partition, which is not mounted by default. Still, it's possible to do it without moving the SD card around.
 
 * Determine the **/boot** partition device:
 
@@ -118,7 +118,7 @@ The file **cmdline.txt** needs to be edited back, but it's on the **/boot** part
 
 * Reboot
 
-## References
+### References
 
 * [http://mapledyne.com/ideas/2015/8/4/reset-lost-admin-password-for-raspberry-pi](http://mapledyne.com/ideas/2015/8/4/reset-lost-admin-password-for-raspberry-pi)
 * [https://www.raspberrypi.org/forums/viewtopic.php?t=20397](https://www.raspberrypi.org/forums/viewtopic.php?t=20397)
