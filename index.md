@@ -1,6 +1,7 @@
 ---
 layout: default
 title: My Blog
+description: Personal blog about my projects and other stuff I'm interested in
 ---
 <h1>{{ page.title }}</h1>
 <ul class="posts">
