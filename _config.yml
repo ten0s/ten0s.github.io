@@ -11,6 +11,20 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+defaults:
+  - scope:
+      path:    "404.html"
+    values:
+      sitemap: false
+  - scope:
+      path:    "yandex_9d4bd434e638f51b.html"
+    values:
+      sitemap: false
+  - scope:
+      path:    "BingSiteAuth.xmll"
+    values:
+      sitemap: false
+
 google_analytics: UA-166991530-1
 
 # Exclude from processing.
