@@ -29,13 +29,13 @@ we will find the dependencies (DLLs and Typelibs) needed for distribution and ho
 
 The below steps assume that Node.js 16.x is installed to `C:/nodejs16`.
 
-![](/assets/images/nodejs-gtk-hello-world-on-windows/nodejs16-path.png)
+![Node.js Install Path Image](/assets/images/nodejs-gtk-hello-world-on-windows/nodejs16-path.png)
 
 Since there's no pre-built [Node-Gtk](https://github.com/romgrk/node-gtk) native module available yet you have to build it yourself.
 
 For this we need to install the Tools for Native Modules.
 
-![](/assets/images/nodejs-gtk-hello-world-on-windows/nodejs16-tools.png)
+![Node.js Install Tools Image](/assets/images/nodejs-gtk-hello-world-on-windows/nodejs16-tools.png)
 
 If you happen to have Node.js already installed, but without the Tools for Native Modules, fear not, simply go to the Node.js
 installation directory and run `install_tools.bat`.
@@ -46,7 +46,7 @@ installation directory and run `install_tools.bat`.
 The below steps assume that MSYS2 is installed to `C:/msys64`.
 
 
-![](/assets/images/nodejs-gtk-hello-world-on-windows/msys2-path.png)
+![MSYS2 Install Path Image](/assets/images/nodejs-gtk-hello-world-on-windows/msys2-path.png)
 
 Otherwise, follow the instructions from [https://www.msys2.org/#installation](https://www.msys2.org/#installation)
 
@@ -102,7 +102,7 @@ Python 3.10.5
 $ gtk3-demo
 ```
 
-![](/assets/images/nodejs-gtk-hello-world-on-windows/gtk3-demo.png)
+![GTK3 Demo Image](/assets/images/nodejs-gtk-hello-world-on-windows/gtk3-demo.png)
 
 Ok, you're all set!
 
@@ -155,7 +155,7 @@ win.showAll()
 $ node index.js
 ```
 
-![](/assets/images/nodejs-gtk-hello-world-on-windows/hello-gtk-mingw64.png)
+![Node.js Gtk Windows Hello Image](/assets/images/nodejs-gtk-hello-world-on-windows/hello-gtk-mingw64.png)
 
 It works! At this point you've got everything to start developing
 [GTK](https://www.gtk.org/) applications using [Node.js](https://nodejs.org/) on Windows.

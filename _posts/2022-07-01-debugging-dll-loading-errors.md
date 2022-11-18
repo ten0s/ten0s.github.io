@@ -10,7 +10,7 @@ You've made an application that works fine in your development environment,
 but fails to start in clear environment.
 You seemed to copy all the needed DLLs, but the error dialog like below keeps showing up.
 
-![](/assets/images/debugging-dll-loading-errors/dll-loading-error.png)
+![Dll Loading Error Image](/assets/images/debugging-dll-loading-errors/dll-loading-error.png)
 
 ### Prerequisites
 

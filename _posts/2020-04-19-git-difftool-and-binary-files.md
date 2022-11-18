@@ -145,7 +145,7 @@ I have [meld](https://meldmerge.org/) as my default difftool and running the com
 $ git difftool de8f24e f02d3c0
 ```
 
-![](/assets/images/git-difftool-and-binary-files/difftool-auto-gibberish.png)
+![Meld Binary Giberrish Image](/assets/images/git-difftool-and-binary-files/difftool-auto-gibberish.png)
 
 From the [Git documentation](https://git-scm.com/docs/gitattributes):
 
@@ -171,13 +171,13 @@ Now you can run:
 $ git difftool --tool docx de8f24e f02d3c0
 ```
 
-![](/assets/images/git-difftool-and-binary-files/difftool-docx.png)
+![Meld Docx As Text Image](/assets/images/git-difftool-and-binary-files/difftool-docx.png)
 
 ```
 $ git difftool --tool xlsx 07e90fe 31cb76d
 ```
 
-![](/assets/images/git-difftool-and-binary-files/difftool-xlsx.png)
+![Meld Xlsx As Text Image](/assets/images/git-difftool-and-binary-files/difftool-xlsx.png)
 
 Let's add some more difftools.
 
@@ -192,7 +192,7 @@ Generic binary diff:
 $ git difftool --tool xxd de8f24e f02d3c0
 ```
 
-![](/assets/images/git-difftool-and-binary-files/difftool-xxd.png)
+![Meld Binary As Xdd Text Image](/assets/images/git-difftool-and-binary-files/difftool-xxd.png)
 
 Both *.docx and *.xlsx files are zipped archives of xml files and we can be compared using **unzip**:
 
@@ -208,13 +208,13 @@ Both *.docx and *.xlsx files are zipped archives of xml files and we can be comp
 $ git difftool --tool unzip-v de8f24e f02d3c0
 ```
 
-![](/assets/images/git-difftool-and-binary-files/diftool-unzip-v.png)
+![Meld Zip List Files Image](/assets/images/git-difftool-and-binary-files/diftool-unzip-v.png)
 
 ```
 $ git difftool --tool unzip-p de8f24e f02d3c0
 ```
 
-![](/assets/images/git-difftool-and-binary-files/difftool-unzip-p.png)
+![Meld Zip Contents Image](/assets/images/git-difftool-and-binary-files/difftool-unzip-p.png)
 
 You can list available difftools:
 
@@ -281,11 +281,11 @@ Now you can run:
 
 $ git difftool de8f24e f02d3c0
 
-![](/assets/images/git-difftool-and-binary-files/difftool-auto-docx.png)
+![Meld Auto Docx As Text Image](/assets/images/git-difftool-and-binary-files/difftool-auto-docx.png)
 
 $ git difftool 07e90fe 31cb76d
 
-![](/assets/images/git-difftool-and-binary-files/difftool-auto-xlsx.png)
+![Meld Auto Xlsx As Text Image](/assets/images/git-difftool-and-binary-files/difftool-auto-xlsx.png)
 
 And it works! I'm not going to claim that this is a production ready solution,
 but as a prove of concept it works just fine.
