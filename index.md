@@ -12,3 +12,7 @@ description: Personal blog about my projects and other stuff I'm interested in
     </li>
   {% endfor %}
 </ul>
+
+{% if jekyll.environment == 'production' and site.google_track_id %}
+  {% include analytics.html %}
+{% endif %}

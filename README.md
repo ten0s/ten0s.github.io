@@ -1,3 +1,9 @@
+Nothing but 'development', that is the default, works. Mostly useless
+
+```
+$ export JEKYLL_ENV=production
+```
+
 ```
 $ ./jekyll serve --watch
 ```

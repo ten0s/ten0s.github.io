@@ -25,7 +25,7 @@ defaults:
     values:
       sitemap: false
 
-# for Minima - included always
+# for Minimal - included always
 #google_analytics: UA-166991530-1
 # custom - included in production
 google_track_id  : UA-166991530-1

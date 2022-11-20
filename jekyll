@@ -13,6 +13,7 @@ opts[k++]=-it
 opts[k++]=--rm
 opts[k++]=--volume="$PWD:/srv/jekyll"
 opts[k++]=--volume="$PWD/vendor/bundle:/usr/local/bundle"
+opts[k++]="--env JEKYLL_ENV"
 if [[ `echo $@ | grep serve` ]]; then
     opts[k++]=--publish=4000:4000
 fi
