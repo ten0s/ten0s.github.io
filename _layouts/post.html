@@ -9,6 +9,8 @@ layout: default
   {{ content }}
 </div>
 
-{% include comments.html %}
+{% if jekyll.environment == 'production' %}
+  {% include comments.html %}
+{% endif %}
 
 <!-- {% include analytics.html %} -->
