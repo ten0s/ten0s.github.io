@@ -10,16 +10,16 @@ layout: default
     Author: {{ page.author | default: site.author }}
   {% endif %}
 
-  {% if page.date %}
+  {% if page.created_date %}
     |
     {% if page.language == 'ru' %} Создано: {% else %} Created: {% endif %}
-    {{ page.date | date: "%Y-%m-%d" }}
+    {{ page.created_date | date: "%Y-%m-%d" }}
   {% endif %}
 
-  {% if page.updated %}
+  {% if page.updated_date %}
     |
     {% if page.language == 'ru' %} Обновлено: {% else %} Updated: {% endif %}
-    {{ page.updated | date: "%Y-%m-%d" }}
+    {{ page.updated_date | date: "%Y-%m-%d" }}
   {% endif %}
 </p>
 

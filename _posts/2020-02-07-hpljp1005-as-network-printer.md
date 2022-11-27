@@ -2,8 +2,9 @@
 layout: post
 title: HP LaserJet P1005 as a Network Printer
 description: Turn HP LaserJet P1005 into a Network Printer
-date: 2020-02-07
+created_date: 2020-02-07
 ---
+
 ### Generic Print Server Setup
 
 * Setup Raspbian on SD card as described [here]({{ site.baseurl }}{% post_url 2020-01-26-setup-raspbian-buster-on-sd-card %}), but change the device name to **printerpi**.

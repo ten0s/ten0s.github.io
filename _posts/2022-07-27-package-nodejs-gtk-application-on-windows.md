@@ -2,7 +2,7 @@
 layout: post
 title: Package Node.js GTK Application on Windows
 description: How to package Node.js GTK app on Windows for distribution
-date: 2022-07-27
+created_date: 2022-07-27
 ---
 
 In the [previous post]({{ site.baseurl }}{% post_url 2022-07-25-find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows %})

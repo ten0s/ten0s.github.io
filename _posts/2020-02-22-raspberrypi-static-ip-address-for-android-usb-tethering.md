@@ -2,8 +2,9 @@
 layout: post
 title: Raspberry Pi Static IP Address for Android USB Tethering
 description: Raspberry Pi Static IP Address for Android USB Tethering
-date: 2020-02-22
+created_date: 2020-02-22
 ---
+
 Recently I deployed my first Raspberry Pi into
 [production]({{ site.baseurl }}{% post_url 2020-02-16-hplj1000-and-windows10 %}) :).
 Shortly after doing that I asked myself - what am I going to do if something goes wrong? What can go wrong?

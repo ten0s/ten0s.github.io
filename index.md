@@ -7,7 +7,7 @@ description: Personal blog about my projects and other stuff I'm interested in
 <ul class="posts">
   {% for post in site.posts %}
     <li class="list-group-item">
-      <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+      <span>{{ post.created_date | date: "%Y-%m-%d" }}</span>
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li>
   {% endfor %}

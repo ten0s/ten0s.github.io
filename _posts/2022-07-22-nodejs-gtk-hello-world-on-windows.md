@@ -2,7 +2,7 @@
 layout: post
 title: Node.js GTK Hello World on Windows
 description: How to make Node.js GTK Hello World on Windows
-date: 2022-07-22
+created_date: 2022-07-22
 ---
 
 Recently I helped porting [Node-Gtk](https://github.com/romgrk/node-gtk/pull/327) to Windows. I also use it in

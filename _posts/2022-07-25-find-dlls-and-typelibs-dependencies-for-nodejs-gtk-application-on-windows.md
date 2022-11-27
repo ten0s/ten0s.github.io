@@ -2,7 +2,7 @@
 layout: post
 title: Find DLLs and Typelibs dependencies for Node.js GTK Application on Windows
 description: How to find DLLs and Typelibs for Node.js GTK app on Windows
-date: 2022-07-25
+created_date: 2022-07-25
 ---
 
 In the [previous post]({{ site.baseurl }}{% post_url 2022-07-22-nodejs-gtk-hello-world-on-windows %})
