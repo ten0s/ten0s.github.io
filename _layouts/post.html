@@ -3,8 +3,25 @@ layout: default
 ---
 <h2>{{ page.title }}</h2>
 
-<p class="view">{{ page.author | default: site.author }}</p>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<p class="meta">
+  {% if page.language == 'ru' %}
+    Автор:  {{ page.author | default: site.author_ru }}
+  {% else %}
+    Author: {{ page.author | default: site.author }}
+  {% endif %}
+
+  {% if page.date %}
+    |
+    {% if page.language == 'ru' %} Создано: {% else %} Created: {% endif %}
+    {{ page.date | date: "%Y-%m-%d" }}
+  {% endif %}
+
+  {% if page.updated %}
+    |
+    {% if page.language == 'ru' %} Обновлено: {% else %} Updated: {% endif %}
+    {{ page.updated | date: "%Y-%m-%d" }}
+  {% endif %}
+</p>
 
 <div class="post">
   {{ content }}
