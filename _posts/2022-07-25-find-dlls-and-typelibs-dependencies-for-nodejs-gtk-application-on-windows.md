@@ -3,6 +3,7 @@ layout: post
 title: Find DLLs and Typelibs dependencies for Node.js GTK Application on Windows
 description: How to find DLLs and Typelibs for Node.js GTK app on Windows
 created_date: 2022-07-25
+updated_date: 2022-12-04
 ---
 
 In the [previous post]({{ site.baseurl }}{% post_url 2022-07-22-nodejs-gtk-hello-world-on-windows %})
@@ -104,7 +105,7 @@ $ export PATH="/c/Program Files (x86)/Windows Kits/10/Debuggers/x64/":$PATH
 Unfortunately, the command below doesn't work in the MSYS shell by default (run it as administrator otherwise)
 
 ```
-$ gflags -i node.exe.exe +sls
+$ gflags -i node.exe +sls
 ```
 
 Anyway, run the command below or go to **Start** -> **Windows Kits** -> **Global Flags (X64)**
