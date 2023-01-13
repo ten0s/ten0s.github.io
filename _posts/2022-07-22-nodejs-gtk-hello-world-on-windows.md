@@ -3,10 +3,11 @@ layout: post
 title: Node.js GTK Hello World on Windows
 description: How to make Node.js GTK Hello World on Windows
 created_date: 2022-07-22
+updated_date: 2023-01-13
 ---
 
 Recently I helped porting [Node-Gtk](https://github.com/romgrk/node-gtk/pull/327) to Windows. I also use it in
-[VeLisp](https://github.com/ten0s/velisp) and it is probably the first usage on Windows,
+[VeLisp - AutoLISP interpreter with DCL support](https://github.com/ten0s/velisp) and it is probably the first usage on Windows,
 so I think I'm in a good position to share what I have learned along the way.
 
 The below you will find the steps how to make [GTK](https://www.gtk.org/) Hello World application using [Node.js](https://nodejs.org/).
