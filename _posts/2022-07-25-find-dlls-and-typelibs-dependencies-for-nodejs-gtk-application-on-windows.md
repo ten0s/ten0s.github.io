@@ -3,7 +3,7 @@ layout: post
 title: Find DLLs and Typelibs dependencies for Node.js GTK Application on Windows
 description: How to find DLLs and Typelibs for Node.js GTK app on Windows
 created_date: 2022-07-25
-updated_date: 2023-01-13
+updated_date: 2023-02-16
 ---
 
 In the [previous post]({{ site.baseurl }}{% post_url 2022-07-22-nodejs-gtk-hello-world-on-windows %})
@@ -318,8 +318,11 @@ mkdir -p ./lib/girepository-1.0/
 
 TEMP=$(mktemp)
 while true; do
-    cdb -c "g;q" $PROG $ARGS &>$TEMP
-    if [[ $? -ne 0 ]]; then
+    cdb -c "g;q" $PROG $ARGS &> $TEMP
+    ret1=$?
+    grep ERROR $TEMP &> /dev/null
+    ret2=$?
+    if [[ $ret1 -ne 0 ]] || [[ $ret2 -eq 0 ]]; then
         copy-dlls $TEMP /mingw64/bin/ ./
         copy-typelibs $TEMP /mingw64/lib/girepository-1.0/ ./lib/girepository-1.0/
     else
