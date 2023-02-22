@@ -3,7 +3,7 @@ layout: post
 title: Node.js GTK Hello World on Windows
 description: How to make Node.js GTK Hello World on Windows
 created_date: 2022-07-22
-updated_date: 2023-01-13
+updated_date: 2023-02-22
 ---
 
 Recently I helped porting [Node-Gtk](https://github.com/romgrk/node-gtk/pull/327) to Windows. I also use it in
@@ -33,7 +33,7 @@ The below steps assume that Node.js 16.x is installed to `C:/nodejs16`.
 
 ![Node.js Install Path Image](/assets/images/nodejs-gtk-hello-world-on-windows/nodejs16-path.png)
 
-Since there's no pre-built [Node-Gtk](https://github.com/romgrk/node-gtk) native module available yet you have to build it yourself.
+Since there's no pre-built [Node-Gtk](https://github.com/romgrk/node-gtk) native module for Windows available yet you have to build it yourself.
 
 For this we need to install the Tools for Native Modules.
 
