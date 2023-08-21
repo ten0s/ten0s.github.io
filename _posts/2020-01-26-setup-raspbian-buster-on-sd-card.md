@@ -3,6 +3,7 @@ layout: post
 title: Setup Raspbian Buster on SD card
 description: How to setup Raspbian Buster on SD card
 created_date: 2020-01-26
+updated_date: 2023-08-21
 ---
 
 * Download the latest image from [https://www.raspberrypi.org/downloads/raspbian/](https://www.raspberrypi.org/downloads/raspbian/)
@@ -119,12 +120,15 @@ $ ssh pi@raspberrypi
 ```
 $ sudo raspi-config
 ```
-  * Change User Password (passwd)
-  * Network Options
-    * N1 Hostname (/etc/hostname, /etc/hosts)
-  * Localization Options
-    * I1 Change Locale: en_US.UTF-8 UTF-8
-    * I2 Change Timezone (/etc/localtime)
+  * 1 System Options
+    * S3 Password (passwd)
+  * 1 System Options
+    * S4 Hostname (/etc/hostname, /etc/hosts)
+  * 5 Localization Options
+    * I1 Locale (en_US.UTF-8 UTF-8)
+    * I2 Timezone (/etc/localtime)
+  * 6 Advanced Options
+    * A4 Network Interface Names
 
 * Reboot
 ```
