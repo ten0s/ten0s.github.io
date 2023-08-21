@@ -204,4 +204,4 @@ That's it! Now you have a fully functional print server accessible
 at `ipp://printerpi/printers/HP_LaserJet_P1005` via [IPP](https://en.wikipedia.org/wiki/Internet_Printing_Protocol) and
 at `\\PRINTERPI\HP_LaserJet_P1005` via [Samba](https://www.samba.org).
 
-To setup the remote printer in Windows 10 or 11 [see]({{ site.baseurl }}{% post_url 2020-02-16-hplj1000-and-windows10#testing-on-windows-10 %}).
+To setup the remote printer in Windows 10 or 11 [see]({{ site.baseurl }}{% post_url 2020-02-16-hplj1000-and-windows10 %}#testing-on-windows-10).
