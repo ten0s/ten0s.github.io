@@ -6,7 +6,7 @@ description: Как сделать самораспаковывающийся ex
 created_date: 2024-10-05
 ---
 
-[English version](README.md)
+[English version]({{ site.baseurl }}{% post_url 2024-10-05-velisp-self-extracting-archive-en %})
 
 Уже несколько человек интересовались как сделать самораспаковывающийся exe-архив для
 [VeLisp](https://github.com/ten0s/velisp) диалога, чтобы его можно было запускать
@@ -18,7 +18,7 @@ created_date: 2024-10-05
 
 В качестве примера создадим exe-архив для [Калькулятора](https://github.com/ten0s/velisp/blob/master/README-ru.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC-%D0%BA%D0%BE%D0%B4-%D0%B8%D0%B7-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0)    .
 
-Копируем файлы исходные файлы [Калькулятора](https://github.com/ten0s/velisp/blob/master/README-ru.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC-%D0%BA%D0%BE%D0%B4-%D0%B8%D0%B7-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0) **calc.lsp**, **calc.dcl** и **util.lsp** в рабочую директорию.
+Копируем исходные файлы **Калькулятора** **calc.lsp**, **calc.dcl** и **util.lsp** в рабочую директорию.
 
 Сюда же скачиваем последнюю версию [VeLisp](https://github.com/ten0s/velisp) [https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip](https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip).
 
@@ -113,7 +113,7 @@ util.lsp=
 
 При старте exe-архива он сначала весь целиком распаковывается во временную директорию.
 
-После чего выполняется команда, записанная в **AppLaunched**, которая распаковывает архив [VeLisp](https://github.com/ten0s/velisp) в ту же временную директорию.
+После чего выполняется команда, записанная в **AppLaunched**, которая распаковывает архив **velisp-0.7.10-win-x64.zip** в ту же временную директорию.
 
 ```
 AppLaunched="wscript.exe unzip.vbs velisp-%VeLispVersion%-win-x64.zip"
@@ -152,7 +152,7 @@ util.lsp=
 
 В рабочей директории должен появиться файл **calc.exe**.
 
-Запускаем **calc.exe** и через некоторое время появляется окно [Калькулятора](https://github.com/ten0s/velisp/blob/master/README-ru.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC-%D0%BA%D0%BE%D0%B4-%D0%B8%D0%B7-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0).
+Запускаем **calc.exe** и через некоторое время появляется окно **Калькулятора*.
 
 ![Calc App Started Image](/assets/images/velisp-self-extracting-archive/calc-app-started.png)
 
