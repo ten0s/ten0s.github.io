@@ -20,7 +20,7 @@ created_date: 2024-10-05
 
 Копируем файлы исходные файлы [Калькулятора](https://github.com/ten0s/velisp/blob/master/README-ru.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC-%D0%BA%D0%BE%D0%B4-%D0%B8%D0%B7-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0) **calc.lsp**, **calc.dcl** и **util.lsp** в рабочую директорию.
 
-Сюда же скачиваем последнюю версию [VeLisp](https://github.com/ten0s/velisp) https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip.
+Сюда же скачиваем последнюю версию [VeLisp](https://github.com/ten0s/velisp) [https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip](https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip).
 
 Тут же нужно создать еще два файла: **unzip.vbs** и **calc.sed** со следующим содержимым.
 
