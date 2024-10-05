@@ -107,7 +107,7 @@ calc.dcl=
 util.lsp=
 ```
 
-**unzip.vbs** it's a VBS-script that allows to unpack ZIP-archive without using any third-party utility.
+**unzip.vbs** it's a VBS-script that allows to unpack a ZIP-archive without using any third-party utility.
 
 **calc.sed** it's a **EIxpress**'s configuration files that describes how to create self-extracting archive and what commands to run on its startup.
 
