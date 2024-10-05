@@ -26,7 +26,7 @@ created_date: 2024-10-05
 
 **unzip.vbs**
 
-```
+```visualbasic
 REM
 REM Unzip file
 REM
