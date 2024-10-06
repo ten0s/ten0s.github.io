@@ -13,7 +13,7 @@ Some people asked how to make self-extracting archive for a
 as a standalone application without installing [VeLisp](https://github.com/ten0s/velisp)
 to target machine and don't copy .lsp и .dcl files.
 
-As a prove of concept I suggest to use, **Windows**'s native **IExpress** application,
+As a prove of concept, I suggest to use **Windows**'s native **IExpress** application,
 which serves this exact purpose.
 
 For example, let's create self-extracting archive for [Calculator](https://github.com/ten0s/velisp/tree/master?tab=readme-ov-file#run-code-from-file).
@@ -109,7 +109,7 @@ util.lsp=
 
 **unzip.vbs** it's a VBS-script that allows to unpack a ZIP-archive without using any third-party utility.
 
-**calc.sed** it's a **EIxpress**'s configuration files that describes how to create the self-extracting archive and what commands to run on its startup.
+**calc.sed** it's a **EIxpress**'s configuration file that describes how to create the self-extracting archive and what commands to run on its startup.
 
 Upon self-extracting archive startup its content is unpacked to a temporary directory.
 
