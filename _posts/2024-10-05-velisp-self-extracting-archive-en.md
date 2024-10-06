@@ -13,14 +13,14 @@ Some people asked how to make self-extracting archive for a
 as a standalone application without installing [VeLisp](https://github.com/ten0s/velisp)
 to target machine and don't copy .lsp и .dcl files.
 
-As prove of concept I suggest to use, **Windows**'s native **IExpress** application,
+As a prove of concept I suggest to use, **Windows**'s native **IExpress** application,
 which serves this exact purpose.
 
 For example, let's create self-extracting archive for [Calculator](https://github.com/ten0s/velisp/tree/master?tab=readme-ov-file#run-code-from-file).
 
-Copy **Calculator**'s source files **calc.lsp**, **calc.dcl** and **util.lsp** to a working directory.
+Copy **Calculator**'s source files **calc.lsp**, **calc.dcl** and **util.lsp** to some working directory.
 
-Then, download to the working directory latest version of [VeLisp](https://github.com/ten0s/velisp) [https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip](https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip).
+Then, download to the working directory the latest version of [VeLisp](https://github.com/ten0s/velisp) [https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip](https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip).
 
 Next, create two more files: **unzip.vbs** и **calc.sed** with the following content.
 
@@ -109,9 +109,9 @@ util.lsp=
 
 **unzip.vbs** it's a VBS-script that allows to unpack a ZIP-archive without using any third-party utility.
 
-**calc.sed** it's a **EIxpress**'s configuration files that describes how to create self-extracting archive and what commands to run on its startup.
+**calc.sed** it's a **EIxpress**'s configuration files that describes how to create the self-extracting archive and what commands to run on its startup.
 
-Upon self-extracting archive startup its content first is unpacked to a temporary directory.
+Upon self-extracting archive startup its content is unpacked to a temporary directory.
 
 Then, a command from **AppLaunched** is executed that unpacks **velisp-0.7.10-win-x64.zip** to the temporary directory.
 
@@ -152,7 +152,7 @@ Run the terminal, move to the working directory and run the command below.
 
 In the working directory **calc.exe** should be created.
 
-Run **calc.exe** and after a while should appear the **Calculator** window.
+Run **calc.exe** and after a while the **Calculator** window should appear.
 
 ![Calc App Started Image](/assets/images/velisp-self-extracting-archive/calc-app-started.png)
 

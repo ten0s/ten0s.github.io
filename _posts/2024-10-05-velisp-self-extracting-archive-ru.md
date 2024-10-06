@@ -16,7 +16,7 @@ created_date: 2024-10-05
 Как вариант решения я предлагаю использовать, встроенную в **Windows**, программу **IExpress**,
 которая создана как раз для этой цели.
 
-В качестве примера создадим exe-архив для [Калькулятора](https://github.com/ten0s/velisp/blob/master/README-ru.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC-%D0%BA%D0%BE%D0%B4-%D0%B8%D0%B7-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0)    .
+В качестве примера создадим exe-архив для [Калькулятора](https://github.com/ten0s/velisp/blob/master/README-ru.md#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC-%D0%BA%D0%BE%D0%B4-%D0%B8%D0%B7-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0).
 
 Копируем исходные файлы **Калькулятора** **calc.lsp**, **calc.dcl** и **util.lsp** в рабочую директорию.
 
@@ -152,7 +152,7 @@ util.lsp=
 
 В рабочей директории должен появиться файл **calc.exe**.
 
-Запускаем **calc.exe** и через некоторое время появляется окно **Калькулятора*.
+Запускаем **calc.exe** и через некоторое время появляется окно **Калькулятора**.
 
 ![Calc App Started Image](/assets/images/velisp-self-extracting-archive/calc-app-started.png)
 
