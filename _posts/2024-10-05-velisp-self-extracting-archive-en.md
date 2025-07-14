@@ -17,7 +17,7 @@ to target machine and don't copy .lsp и .dcl files.
 As a prove of concept, I suggest to use **Windows**'s native **IExpress** application,
 which serves this exact purpose.
 
-For example, let's create self-extracting archive for [Calculator](https://github.com/ten0s/velisp/tree/master?tab=readme-ov-file#run-code-from-file).
+For example, let's create a self-extracting archive for [Calculator](https://github.com/ten0s/velisp/tree/master?tab=readme-ov-file#run-code-from-file).
 
 Copy **Calculator**'s source files **calc.lsp**, **calc.dcl** and **util.lsp** to some working directory.
 
@@ -141,7 +141,7 @@ calc.dcl=
 util.lsp=
 ```
 
-The working directory now should look like this.
+The working directory should now look like this.
 
 ![Source Files Image](/assets/images/velisp-self-extracting-archive/source-files.png)
 
