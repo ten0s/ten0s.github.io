@@ -4,6 +4,7 @@ language: en
 title: How to make self-extracting archive for VeLisp dialog
 description: How to make self-extracting archive for VeLisp dialog
 created_date: 2024-10-05
+updated_date: 2025-07-14
 ---
 
 [Русская версия]({{ site.baseurl }}{% post_url 2024-10-05-velisp-self-extracting-archive-ru %})
@@ -20,7 +21,7 @@ For example, let's create self-extracting archive for [Calculator](https://githu
 
 Copy **Calculator**'s source files **calc.lsp**, **calc.dcl** and **util.lsp** to some working directory.
 
-Then, download to the working directory the latest version of [VeLisp](https://github.com/ten0s/velisp) [https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip](https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip).
+Then, download to the working directory some version of [VeLisp](https://github.com/ten0s/velisp) [https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip](https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip).
 
 Next, create two more files: **unzip.vbs** и **calc.sed** with the following content.
 
@@ -109,7 +110,7 @@ util.lsp=
 
 **unzip.vbs** it's a VBS-script that allows to unpack a ZIP-archive without using any third-party utility.
 
-**calc.sed** it's a **EIxpress**'s configuration file that describes how to create the self-extracting archive and what commands to run on its startup.
+**calc.sed** it's a **IExpress**'s configuration file that describes how to create the self-extracting archive and what commands to run on its startup.
 
 Upon self-extracting archive startup its content is unpacked to a temporary directory.
 

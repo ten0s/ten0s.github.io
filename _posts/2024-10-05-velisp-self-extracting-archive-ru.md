@@ -4,6 +4,7 @@ language: ru
 title: Как сделать самораспаковывающийся exe-архив для VeLisp диалога
 description: Как сделать самораспаковывающийся exe-архив для VeLisp диалога
 created_date: 2024-10-05
+updated_date: 2025-07-14
 ---
 
 [English version]({{ site.baseurl }}{% post_url 2024-10-05-velisp-self-extracting-archive-en %})
@@ -20,7 +21,7 @@ created_date: 2024-10-05
 
 Копируем исходные файлы **Калькулятора** **calc.lsp**, **calc.dcl** и **util.lsp** в рабочую директорию.
 
-Сюда же скачиваем последнюю версию [VeLisp](https://github.com/ten0s/velisp) [https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip](https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip).
+Сюда же скачиваем версию [VeLisp](https://github.com/ten0s/velisp) [https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip](https://github.com/ten0s/velisp/releases/download/0.7.10/velisp-0.7.10-win-x64.zip).
 
 Тут же нужно создать еще два файла: **unzip.vbs** и **calc.sed** со следующим содержимым.
 
@@ -109,7 +110,7 @@ util.lsp=
 
 **unzip.vbs** это VBS-скрипт, который позволяет распаковать ZIP-архив без использования сторонних утилит.
 
-**calc.sed** это конфигурационный файл для **EIxpress** с описанием того, как создавать самораспаковывающийся exe-архив и какие команды выполнять при его запуске.
+**calc.sed** это конфигурационный файл для **IExpress** с описанием того, как создавать самораспаковывающийся exe-архив и какие команды выполнять при его запуске.
 
 При старте exe-архива он сначала весь целиком распаковывается во временную директорию.
 
